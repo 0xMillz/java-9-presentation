@@ -189,39 +189,37 @@
         </section>
         <section>
             <h2>Java Platform Module System</h2>
-            <p>module-info.java</p>
+            <p>src/module-info.java</p>
             <pre>
             <code data-trim>
-            module com.opengamma.util {
+            module com.dish.ordermanagement {
                 requires org.joda.beans;  // this is a module name, not a package name
                 requires com.google.guava;
 
-                exports com.opengamma.util;  // this is a package name, not a module name
+                exports com.dish.ordermanagement.util;  // this is a package name, not a module name
+                exports com.dish.ordermanagement.service;
             }
             </code>
             </pre>
         </section>
         <section>
             <section>
-                <h2>Java Platform Module System</h2>
-                <p>Old Java</p>
-                <ul>
-                    <li>public</li>
-                    <li>private</li>
-                    <li>default</li>
-                    <li>protected</li>
-                </ul>
+                <h2>Classpath</h2>
+                <img class="stretch" src="images/java8application.png">
             </section>
             <section>
-                <h2>Java Platform Module System</h2>
-                <p>New Java</p>
+                <h2>Unnamed Module</h2>
+                <img class="stretch" src="images/unnamed_module.png">
+            </section>
+            <section>
+                <h2>Automatic Modules</h2>
                 <ul>
-                    <li>public to everyone who reads this module (exports)</li>
-                    <li>public to some modules that read this module (exports to)</li>
-                    <li>public to every other class within the module itself</li>
-                    <li>private</li>
-                    <li>default</li>
-                    <li>protected</li>
+                    <li>Real modules</li>
+                    <li>Simply place unmodified jar file on module path</li>
+                    <li>No changes to JAR file</li>
+                    <li>Module name derived from JAR file name</li>
+                    <li>Automatically exports all its packages</li>
+                    <li>Automatically requires all modules on module path</li>
                 </ul>
             </section>
         </section>
@@ -253,25 +251,8 @@
             </section>
         </section>
         <section>
-            <section>
-                <h2>Classpath</h2>
-                <img class="stretch" src="images/java8application.png">
-            </section>
-            <section>
-                <h2>Unnamed Module</h2>
-                <img class="stretch" src="images/unnamed_module.png">
-            </section>
-            <section>
-                <h2>Automatic Modules</h2>
-                <ul>
-                    <li>Real modules</li>
-                    <li>Simply place unmodified jar file on module path</li>
-                    <li>No changes to JAR file</li>
-                    <li>Module name derived from JAR file name</li>
-                    <li>Automatically exports all its packages</li>
-                    <li>Automatically requires all modules on module path</li>
-                </ul>
-            </section>
+            <h1>The End</h1>
+            <p>Thanks!</p>
         </section>
     </div>
 </div>
